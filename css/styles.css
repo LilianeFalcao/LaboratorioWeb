@@ -5,8 +5,10 @@
     font-family: "Segoe UI", Arial, sans-serif;
 }
 
+/* CSS Tela Cadastro */
+
 body {
-    background-color: #1e272e; /* fundo geral */
+    background-color: #1e272e; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,7 +45,7 @@ main section p{
     font-size: 1rem;
     padding: 20px;
     color: #fff;
-
+    text-align: center
 }
 
 main section form {
