@@ -1,18 +1,30 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+*{
     margin: 0;
     padding: 0;
+    outline: 0;
     box-sizing: border-box;
     font-family: "Segoe UI", Arial, sans-serif;
 }
 
+:root{
+    --fundoFeed: #f4f6f8;
+    --Cards: #B7BFCA;
+    --CorCabecalho: #263238;
+    --Botao: #455A64;
+    --EfeitoBotao: #97b5c2;
+    --Titulo: #333;
+}
+
 body.fundoFeed {
-    background-color: #f4f6f8;
-    color: #333;
+    background-color: var(--fundoFeed);
+    color: var(--Titulo);
 }
 
 
 header {
-    background-color: #263238;
+    background-color: var(--CorCabecalho);
     color: white;
     display: flex;
     justify-content: space-between;
@@ -37,12 +49,12 @@ header nav a {
 }
 
 header nav a:hover {
-    color: #97b5c2;
+    color: var(--EfeitoBotao);
 }
 
 
 header nav button, header nav .btn {
-    background-color: #455A64;
+    background-color: var(--Botao);
     color: #ffffff;
     padding: 8px 14px;
     border-radius: 6px;
@@ -53,7 +65,7 @@ header nav button, header nav .btn {
 }
 
 header nav button:hover, header nav .btn:hover {
-    background-color: #738a94;
+    background-color: var(--EfeitoBotao);
     color: white;
 }
 
@@ -66,7 +78,22 @@ main h1 {
     font-size: 1.8rem;
     max-width: 700px;
     margin: 0 auto;
-    color: #263238;
+    color: var(--Titulo);
+}
+
+main section{
+    background-color: var(--Cards);
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    margin-top: 30px;
+    padding: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+main section img{
+    width: 200px;
 }
 
     /*
