@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/feed.css">
-    <link rel="stylesheet" href="./css/feed.css">
     <title>feed</title>
 </head>
 <body class="fundoFeed">
@@ -20,16 +19,47 @@
     </header>
     <main>
         <h1>Veja o que a comunidade está lendo e compartilhe seu próprio progresso</h1>
-        <section>
-            <img src="./img/Manga_Vinland_Saga.jpg" alt="Capa do Mangá de Vinland Saga">
+        <section class="card">
+            <figure>
+                <img src="./img/Manga_Vinland_Saga.jpg" 
+                    alt="Capa do Mangá Vinland Saga">
+            </figure>
+
             <div class="Card-Text">
-                    <h4>Vinland Saga</h4>
-                    <p>Cápitulos 120 de 220</p>
-                    <p>Progresso</p>
-                    <p>Curtir</p>
-                    <p>Comentar</p>
+                <h4>Vinland Saga</h4>
+                <p>Capítulos 120 de 220</p>
+
+                <label for="progresso">Progresso</label>
+                <progress id="progresso" value="120" max="220">59%</progress>
+
+                <div class="acoes">
+                    <button>Curtir</button>
+                    <button>Comentar</button>
+                </div>
+            </div>
+        </section>
+        <section class="card">
+            <figure>
+                <img src="./img/Manga_Kimetsu_No_Yaiba.jpg" 
+                    alt="Capa do Mangá Kimetsu no Yaiba">
+            </figure>
+
+            <div class="Card-Text">
+                <h4>Kimetsu no Yaiba</h4>
+                <p>Capítulos 205 de 205</p>
+
+                <label for="progresso">Progresso</label>
+                <progress id="progresso" value="205" max="205">100%</progress>
+
+                <div class="acoes">
+                    <button>Curtir</button>
+                    <button>Comentar</button>
+                </div>
             </div>
         </section>
     </main>
+    <footer>
+        <h2> Todos os direitos reservados © 2025 JornadaDoLeitor.</h2>
+    </footer>
 </body>
 </html>
