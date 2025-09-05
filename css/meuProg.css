@@ -114,7 +114,7 @@ main {
     justify-content: center;
     align-items: center;
     background-color: var(--Fundo);
-    min-height: calc(100vh - 10rem);
+    min-height: calc(100vh - 9rem);
 }
 
 main section {
@@ -269,4 +269,19 @@ progress::-webkit-progress-value {
     outline: none;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease-in-out;
+}
+
+/*Footer*/
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--CorCabecalho);
+    height: 4.2rem;
+}
+
+footer h2 {
+    margin: 5px;
+    color: #ffffff;
 }

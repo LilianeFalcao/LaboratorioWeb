@@ -76,12 +76,12 @@ main {
     align-items: center;
     padding: 40px;
     text-align: center;
-    min-height: calc(100vh - 10rem);
+    min-height: calc(100vh - 9rem);
 }
 
 main section {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 20px;
     width: 100%;
     max-width: 1200px;
