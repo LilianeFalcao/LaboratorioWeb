@@ -1,19 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 
-*{
+* {
     margin: 0;
     padding: 0;
     outline: 0;
     box-sizing: border-box;
-      font-family: "DM Sans", "Segoe UI", Arial, sans-serif;
-
+    font-family: "DM Sans", "Segoe UI", Arial, sans-serif;
 }
 
-:root{
-    --Fundo: #F5F0E6;
-    --Cards: #B7BFCA;
+:root {
+    --Fundo: #f5f0e6;
+    --Cards: #b7bfca;
     --CorCabecalho: #263238;
-    --Botao: #455A64;
+    --Botao: #455a64;
     --EfeitoBotao: #97b5c2;
     --Titulo: #333;
 }
@@ -22,7 +21,6 @@ body.fundoFeed {
     background-color: var(--Fundo);
     color: var(--Titulo);
 }
-
 
 header {
     background-color: var(--CorCabecalho);
@@ -54,8 +52,8 @@ header nav a:hover {
     color: var(--EfeitoBotao);
 }
 
-
-header nav button, header nav .btn {
+header nav button,
+header nav .btn {
     background-color: var(--Botao);
     color: #ffffff;
     padding: 8px 14px;
@@ -66,16 +64,30 @@ header nav button, header nav .btn {
     transition: 0.3s;
 }
 
-header nav button:hover, header nav .btn:hover {
+header nav button:hover,
+header nav .btn:hover {
     background-color: var(--EfeitoBotao);
     color: white;
 }
 
 main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 40px;
     text-align: center;
     min-height: calc(100vh - 10rem);
 }
+
+main section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
 
 main h1 {
     font-size: 1.8rem;
@@ -84,57 +96,93 @@ main h1 {
     color: var(--Titulo);
 }
 
+/* Container principal */
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
 
+/* Card */
 .card {
     background-color: var(--Cards);
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
     gap: 20px;
     border-radius: 15px;
     padding: 20px;
-    max-width: 700px;
-    margin: 20px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    flex: 1 1 280px;
+    max-width: 100%;
 }
 
+/* Imagem do card */
 .card img {
-    width: 200px;
+    width: 160px;
+    height: auto;
     border-radius: 10px;
     object-fit: cover;
+    flex-shrink: 0;
 }
 
-.Card-Text {
+/* Área de texto */
+
+.card-text {
     display: flex;
     flex-direction: column;
-    font-size: 1.2rem;
-    align-items: flex-start;
     gap: 10px;
+    flex: 1;
+    justify-content: center;
+    align-items: flex-start;
 }
 
-/* Mexendo na barra de progresso*/
-.Card-Text progress {
+.card-text h4 {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.card-text p,
+label {
+    color: white;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+progress {
     width: 100%;
-    height: 12px;
-    border-radius: 6px;
+    height: 15px;
+    border-radius: 8px;
     overflow: hidden;
+    appearance: none;
 }
 
 progress::-webkit-progress-bar {
-    background-color: #D9D9D9; 
-    border-radius: 10px;
+    background-color: #dcdcdc;
+    border-radius: 8px;
 }
 
 progress::-webkit-progress-value {
-    background-color: #263238; 
-    border-radius: 10px;
+    background-color: #455a64;
+    border-radius: 8px;
 }
 
-.Card-Text .acoes {
+progress::-moz-progress-bar {
+    background-color: #455a64;
+    border-radius: 8px;
+}
+
+.acoes {
     display: flex;
     gap: 15px;
 }
 
-.Card-Text button {
+.acoes button {
     background: var(--Botao);
     color: white;
     border: none;
@@ -144,19 +192,19 @@ progress::-webkit-progress-value {
     transition: 0.3s;
 }
 
-.Card-Text button:hover {
+.acoes button:hover {
     background: var(--EfeitoBotao);
 }
 
-footer{
-    background-color: var(--CorCabecalho);
-    height: 3rem;
-}
-
-footer h2{
+footer {
     display: flex;
     justify-content: center;
-    margin: 5px;
     align-items: center;
+    background-color: var(--CorCabecalho);
+    height: 4.2rem;
+}
+
+footer h2 {
+    margin: 5px;
     color: #ffffff;
 }

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang= "pt-br">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/feed.css">
-    <title>feed</title>
+    <link rel="stylesheet" href="./css/responsivo.css">
+    <title>Feed</title>
 </head>
 <body class="fundoFeed">
     <header>
@@ -13,53 +14,62 @@
             <ul>
                 <li><a href="feed.html">Feed</a></li>
                 <li><a href="./meuprogresso.html">Meu Progresso</a></li>
-                <li><a href="#" class="btn"> + Adicionar Progresso </a></li>
+                <li><a href="#" class="btn">+ Adicionar Progresso</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
         <h1>Veja o que a comunidade está lendo e compartilhe seu próprio progresso</h1>
-        <section class="card">
-            <figure>
-                <img src="./img/Manga_Vinland_Saga.jpg" 
-                    alt="Capa do Mangá Vinland Saga">
-            </figure>
+        
+        <section class="card-container">
 
-            <div class="Card-Text">
-                <h4>Vinland Saga</h4>
-                <p>Capítulos 120 de 220</p>
+            <section class="card">
+                <figure>
+                    <img src="./img/Manga_Vinland_Saga.jpg" 
+                        alt="Capa do Mangá Vinland Saga">
+                </figure>
 
-                <label for="progresso">Progresso</label>
-                <progress id="progresso" value="120" max="220">59%</progress>
+                <div class="card-text">
+                    <h4>Vinland Saga</h4>
+                    <p>Capítulos 120 de 220</p>
 
-                <div class="acoes">
-                    <button>Curtir</button>
-                    <button>Comentar</button>
+                    <label for="progresso-vinland">Progresso</label>
+                    <progress id="progresso-vinland" value="120" max="220">59%</progress>
+
+                    <div class="acoes">
+                        <button aria-label="Curtir Vinland Saga">Curtir</button>
+                        <button aria-label="Comentar Vinland Saga">Comentar</button>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <section class="card">
-            <figure>
-                <img src="./img/Manga_Kimetsu_No_Yaiba.jpg" 
-                    alt="Capa do Mangá Kimetsu no Yaiba">
-            </figure>
+            </section>
 
-            <div class="Card-Text">
-                <h4>Kimetsu no Yaiba</h4>
-                <p>Capítulos 205 de 205</p>
+            <section class="card">
+                <figure>
+                    <img src="./img/Manga_Kimetsu_No_Yaiba.jpg" 
+                        alt="Capa do Mangá Kimetsu no Yaiba">
+                </figure>
 
-                <label for="progresso">Progresso</label>
-                <progress id="progresso" value="205" max="205">100%</progress>
+                <div class="card-text">
+                    <h4>Kimetsu no Yaiba</h4>
+                    <p>Capítulos 205 de 205</p>
 
-                <div class="acoes">
-                    <button>Curtir</button>
-                    <button>Comentar</button>
+                    <label for="progresso-kimetsu">Progresso</label>
+                    <progress id="progresso-kimetsu" value="205" max="205">100%</progress>
+
+                    <div class="acoes">
+                        <button aria-label="Curtir Kimetsu no Yaiba">Curtir</button>
+                        <button aria-label="Comentar Kimetsu no Yaiba">Comentar</button>
+                    </div>
                 </div>
-            </div>
+            </section>
+
         </section>
+
     </main>
+
     <footer>
-        <h2> Todos os direitos reservados © 2025 JornadaDoLeitor.</h2>
+        <h2>Todos os direitos reservados © 2025 JornadaDoLeitor.</h2>
     </footer>
 </body>
 </html>

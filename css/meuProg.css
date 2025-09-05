@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 
-*{
+* {
     margin: 0;
     padding: 0;
     outline: 0;
@@ -8,22 +8,22 @@
     font-family: "Segoe UI", Arial, sans-serif;
 }
 
-:root{
-    --Fundo: #F5F0E6;
-    --Cards: #B7BFCA;
+:root {
+    --Fundo: #f5f0e6;
+    --Cards: #b7bfca;
     --CorCabecalho: #263238;
-    --Botao: #455A64;   
+    --Botao: #455a64;
     --EfeitoBotao: #97b5c2;
     --Titulo: #333;
     --Completo: #4caf50;
     --Lendo: #ffa726;
+    --buscar: #b7bfca;
 }
 
 body.fundo {
     background-color: var(--Fundo);
     color: var(--Titulo);
 }
-
 
 header {
     background-color: var(--CorCabecalho);
@@ -32,6 +32,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 15px 40px;
+    flex-wrap: wrap; /* Permite quebra em telas pequenas */
+    gap: 10px; 
 }
 
 header img {
@@ -54,8 +56,9 @@ header nav a:hover {
     color: var(--EfeitoBotao);
 }
 
-
-header nav button, header nav .btn {
+/* Botão já existente */
+header nav button,
+header nav .btn {
     background-color: var(--Botao);
     color: #ffffff;
     padding: 8px 14px;
@@ -63,15 +66,49 @@ header nav button, header nav .btn {
     border: none;
     font-weight: bold;
     cursor: pointer;
-    transition: 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-header nav button:hover, header nav .btn:hover {
+/* Hover */
+header nav button:hover,
+header nav .btn:hover {
     background-color: var(--EfeitoBotao);
     color: white;
 }
 
-main{
+/* Formulário de busca */
+.search-form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+}
+
+.search-form input {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    width: 100%; 
+    max-width: 650px; 
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.search-form button {
+    background-color: var(--Botao);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background-color: var(--EfeitoBotao);
+}
+
+
+main {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -89,11 +126,12 @@ main section {
     padding: 20px;
 }
 
-
 .filtros {
-display: flex;
-gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
+
 .filtros button {
     color: #fff;
     background-color: var(--Botao);
@@ -101,94 +139,134 @@ gap: 20px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    transition: 0.3s;
 }
+
 .filtros button:hover {
     background-color: var(--EfeitoBotao);
 }
 
+/* Container principal */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    /* centraliza os cards */
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* Card */
 .card {
     background-color: var(--Cards);
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
     gap: 20px;
     border-radius: 15px;
     padding: 20px;
-    max-width: 900px;
-    margin: 20px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    flex: 1 1 280px;
+    /* ocupa espaço flexível mas respeita largura mínima */
+    max-width: 100%;
 }
 
+/* Imagem do card */
 .card img {
-    width: 200px;
+    width: 160px;
+    height: auto;
     border-radius: 10px;
     object-fit: cover;
+    flex-shrink: 0;
 }
 
+/* Área de texto */
 .Card-Text {
     display: flex;
     flex-direction: column;
-    font-size: 1.2rem;
-    align-items: flex-start;
     gap: 10px;
+    flex: 1;
 }
 
-/* Mexendo na barra de progresso*/
+.Card-Text h4 {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.Card-Text p ,label{
+    color: white;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+/* Botões e ações */
+.acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.acoes img {
+    width: 1.6rem;
+    filter: invert(100%);
+}
+
+.acoes button {
+    background: var(--Botao);
+    color: white;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.acoes button:hover {
+    background: var(--EfeitoBotao);
+}
+
+/* Tag */
+.tag {
+    background-color: var(--Completo);
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 12px;
+    align-self: flex-start;
+}
+
+/* Barra de progresso */
 .Card-Text progress {
     width: 100%;
-    height: 12px;
+    height: 10px;
     border-radius: 6px;
     overflow: hidden;
 }
 
-
 progress::-moz-progress-bar {
+    background-color: #263238;
+}
+
+progress::-webkit-progress-value {
     background-color: #263238;
     border-radius: 10px;
 }
 
-progress::-webkit-progress-value {
-    background-color: #263238; 
-    border-radius: 10px;
-}
+/*Busca*/
 
-.Card-Text .acoes {
-    display: flex;
-    gap: 15px;
-}
-
-.Card-Text button {
-    background: var(--Botao);
-    color: white;
+.buscar {
+    background-color: var(--buscar);
     border: none;
-    padding: 6px 12px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.Card-Text button:hover {
-    background: var(--EfeitoBotao);
-}
-
-.acoes img {
-    width: 75px;   
-}
-
-.acoes button {
-    padding: 10px 20px; 
-    font-size: 16px;   
-    border-radius: 8px; 
-    border: none;       
-    cursor: pointer;    
-    margin: 5px;        
-}
-
-/* Tag de Lendo ou Completo*/
-
-.tag{
-    background-color: var(--Completo);
-    color: #ffffff;
-    padding: 8px;
-    border-radius: 20px;
+    border-radius: 15px;
+    padding: 12px 20px;
+    height: 40px;
+    width: 100%;
+    max-width: 600px;
+    outline: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
 }

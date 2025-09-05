@@ -4,27 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/meuProg.css">
+    <link rel="stylesheet" href="./css/responsivo.css">
     <title>Meu Progresso</title>
 </head>
 <body class="fundo">
     <header>
-     <a href="feed.html"><img src="./img/Logo.png" alt="Logo do site Jornada do Leitor"></a>
+        <a href="feed.html">
+            <img src="./img/Logo.png" alt="Logo do site Jornada do Leitor">
+        </a>
         <nav>
             <ul>
                 <li><a href="feed.html">Feed</a></li>
                 <li><a href="./meuprogresso.html">Meu Progresso</a></li>
-                <li><a href="#" class="btn"> + Adicionar Progresso </a></li>
+                <li>
+                    <a href="#" class="btn" aria-label="Adicionar Progresso">+ Adicionar Progresso</a>
+                </li>
             </ul>
         </nav>
     </header>
+
+
     <main>
         <h1>Meu Progresso de Leitura</h1>
         <p>Acompanhe e gerencie sua coleção de mangás</p>
         
         <section>
-            <form action="submit">
+            <form class="search-form"  action="submit">
                 <img src="./img/Search_Icon.png" alt="">
-                <input type="text" placeholder="Buscar Mangás">
+                <input class="buscar" type="text" placeholder="Buscar Mangás">
             </form>
             <div class="filtros">
                 <button type="button">Todos</button>
@@ -32,8 +39,8 @@
                 <button type="button">Lendo...</button>
             </div>
         </section>
-    <div class="teste">
-        
+
+        <section class="cards-container">
             <section class="card">
                 <figure>
                     <img src="./img/Manga_Kimetsu_No_Yaiba.jpg" 
@@ -48,11 +55,12 @@
 
                     <label for="progresso">Progresso</label>
                     <progress id="progresso" value="205" max="205">100%</progress>
-
-                    <div class="acoes">
-                        <p>Atualizado em: 28-08-2025</p>
+                    
+                    <p>Atualizado em: 28-08-2025</p>    
+                    
+                    <div class="acoes">                        
                         <button><img src="./img/Icon_Edit.png" alt=""></button>
-                        <button><img src="./img/Icon_Delete.png" alt=""></button>
+                        <button><img src="./img/dumpster_icon.png" alt=""></button>
                     </div>
                 </div>
             </section>
@@ -68,17 +76,17 @@
 
                     <p>Capítulos 115.50 de 115.50</p>
 
-                    <label for="progresso">Progresso</label>
-                    <progress id="progresso" value="115.50" max="115.50">100%</progress>
+                    <label for="progresso1">Progresso</label>
+                    <progress id="progresso1" value="115.50" max="115.50">100%</progress>
 
+                    <p>Atualizado em: 01-09-2025</p>
                     <div class="acoes">
-                        <p>Atualizado em: 01-09-2025</p>
-                        <button><img src="./img/Icon_Edit.png" alt=""></button>
-                        <button><img src="./img/Icon_Delete.png" alt=""></button>
+                        <button aria-label="Editar"><img src="./img/Icon_Edit.png" alt=""></button>
+                        <button aria-label="Excluir"><img src="./img/dumpster_icon.png" alt=""></button>
                     </div>
                 </div>
             </section>
-    </div>
+        </section>
     </main>
 </body>
 </html>

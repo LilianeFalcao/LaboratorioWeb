@@ -84,7 +84,10 @@ main section input::placeholder {
     color: #b0bec5;
 }
 
-main section button {
+.Botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 12px;
     border: none;
     border-radius: 8px;
@@ -96,39 +99,28 @@ main section button {
     transition: 0.3s;
 }
 
-main section button:hover {
+.Botao{
+    text-decoration: none;
+}
+
+.Botao:hover {
     background-color: #80D6FF;
     color: #263238;
 }
 
-main section p.link {
-    text-align: center;
+.link {
+    align-items: center;
     font-size: 0.9rem;
     color: #cfd8dc;
     margin-top: 10px;
 }
 
-main section p.link a {
+.link a {
     color: #80D6FF;
     font-weight: bold;
     text-decoration: none;
 }
 
-main section p.link a:hover {
-    text-decoration: underline;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    main {
-        flex-direction: column;
-    }
-
-    main figure {
-        height: 250px;
-    }
-
-    main section {
-        padding: 20px;
-    }
+.link a:hover {
+    text-decoration: none;
 }
