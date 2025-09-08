@@ -111,11 +111,12 @@ header nav .btn:hover {
 main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     background-color: var(--Fundo);
+    margin-top: 2rem;
     min-height: calc(100vh - 9rem);
 }
+
 
 main section {
     display: grid;
@@ -151,7 +152,6 @@ main section {
     flex-wrap: wrap;
     gap: 24px;
     justify-content: center;
-    /* centraliza os cards */
     width: 100%;
     max-width: 1200px;
     margin: 20px auto;
@@ -168,7 +168,6 @@ main section {
     padding: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     flex: 1 1 280px;
-    /* ocupa espaço flexível mas respeita largura mínima */
     max-width: 100%;
 }
 

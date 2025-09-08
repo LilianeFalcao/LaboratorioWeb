@@ -1,5 +1,18 @@
 
 /* Responsividade */
+@media (max-width: 670px){
+    .card-text h4{
+        margin-top: 2rem;
+    }
+
+    footer h2 {
+        font-size: 1.5rem;
+        margin: 5px;
+        color: #ffffff;
+    }
+}
+
+
 @media (max-width: 600px) {
     header nav ul li{
         font-size: 0.9rem;
@@ -25,7 +38,49 @@
         width: 1.6rem;
         filter: invert(100%);
     }
+
+    .card-text h4{
+        margin-top: 2rem;
+    }
+
+    footer h2 {
+        font-size: 1rem;
+        margin: 5px;
+        color: #ffffff;
+    }
 }
+@media (max-width: 748px) {
+    header{
+       display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 40px;
+        flex-wrap: nowrap; 
+    }
+    header nav ul{
+        list-style: none;
+        display: flex;
+        gap: 5px;
+    }
+
+    header nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+
+    }
+
+    .card-text h4{
+        margin-top: 2rem;
+    }
+
+    footer h2 {
+        font-size: 1.5rem;
+        margin: 5px;
+        color: #ffffff;
+    }
+}
+
 
 @media (max-width: 768px) {
     main {
@@ -115,9 +170,15 @@
     }
 }
 
-/*
-@media (max-width: 516px) {
-    footer{
 
+@media (max-width: 516px) {
+    .card-text h4{
+        margin-top: 2rem;
     }
-}*/
+
+    footer h2 {
+        font-size: 1rem;
+        margin: 5px;
+        color: #ffffff;
+    }
+}
