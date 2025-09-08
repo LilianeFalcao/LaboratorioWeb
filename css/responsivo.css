@@ -1,7 +1,6 @@
-
 /* Responsividade */
-@media (max-width: 670px){
-    .card-text h4{
+@media (max-width: 670px) {
+    .card-text h4 {
         margin-top: 2rem;
     }
 
@@ -14,7 +13,7 @@
 
 
 @media (max-width: 600px) {
-    header nav ul li{
+    header nav ul li {
         font-size: 0.9rem;
     }
 
@@ -33,13 +32,13 @@
         justify-content: center;
         width: 2;
     }
-    
+
     .acoes img {
         width: 1.6rem;
         filter: invert(100%);
     }
 
-    .card-text h4{
+    .card-text h4 {
         margin-top: 2rem;
     }
 
@@ -49,15 +48,17 @@
         color: #ffffff;
     }
 }
+
 @media (max-width: 748px) {
-    header{
-       display: flex;
+    header {
+        display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 15px 40px;
-        flex-wrap: nowrap; 
+        flex-wrap: nowrap;
     }
-    header nav ul{
+
+    header nav ul {
         list-style: none;
         display: flex;
         gap: 5px;
@@ -70,7 +71,7 @@
 
     }
 
-    .card-text h4{
+    .card-text h4 {
         margin-top: 2rem;
     }
 
@@ -94,7 +95,7 @@
     main section {
         padding: 20px;
     }
-    
+
     .card {
         flex-direction: column;
         align-items: center;
@@ -107,7 +108,7 @@
         height: auto;
     }
 
-    .Card-Text h4{
+    .Card-Text h4 {
         margin-top: 1.8rem;
         font-size: 1rem;
     }
@@ -124,7 +125,7 @@
         text-align: center;
     }
 
-    
+
     .search-form {
         width: 100%;
         justify-content: center;
@@ -163,8 +164,8 @@
         max-width: 200px;
         height: auto;
     }
-    
-    .acoes button img{
+
+    .acoes button img {
         width: 40px;
         height: 40px;
     }
@@ -172,7 +173,7 @@
 
 
 @media (max-width: 516px) {
-    .card-text h4{
+    .card-text h4 {
         margin-top: 2rem;
     }
 
