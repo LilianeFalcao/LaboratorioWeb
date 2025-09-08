@@ -51,8 +51,14 @@
         max-width: 200px;
         height: auto;
     }
+
+    .Card-Text h4{
+        margin-top: 1.8rem;
+        font-size: 1rem;
+    }
+
     header nav ul {
-        flex-direction: column;
+        flex-direction: row;
         gap: 10px;
         width: 100%;
     }
@@ -102,4 +108,16 @@
         max-width: 200px;
         height: auto;
     }
+    
+    .acoes button img{
+        width: 40px;
+        height: 40px;
+    }
 }
+
+/*
+@media (max-width: 516px) {
+    footer{
+
+    }
+}*/
