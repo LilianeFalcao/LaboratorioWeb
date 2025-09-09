@@ -1,4 +1,14 @@
 /* Responsividade */
+@media (max-width: 536px) {
+    figure img{
+        width: 2rem;
+        height: 2rem;
+        object-fit: cover;
+    }
+}
+
+
+
 @media (max-width: 670px) {
     .card-text h4 {
         margin-top: 2rem;
