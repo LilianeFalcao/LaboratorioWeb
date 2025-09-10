@@ -34,11 +34,11 @@
             <form class="search-form" action="submit">
                 <input class="buscar" type="text" placeholder="Buscar Mangás">
             </form>
-            <div class="filtros">
+            <aside class="filtros">
                 <button type="button">Todos</button>
                 <button type="button">Completos</button>
                 <button type="button">Lendo...</button>
-            </div>
+            </aside>
         </section>
 
         <section class="cards-container">
@@ -47,7 +47,7 @@
                     <img src="./img/Manga_Kimetsu_No_Yaiba.jpg" alt="Capa do Mangá Kimetsu no Yaiba">
                 </figure>
 
-                <div class="Card-Text">
+                <article class="Card-Text">
                     <h4>Kimetsu no Yaiba</h4>
                     <p class="tag">Completo</p>
 
@@ -58,18 +58,18 @@
 
                     <p>Atualizado em: 28-08-2025</p>
 
-                    <div class="acoes">
+                    <nav class="acoes">
                         <button><img src="./img/Icon_Edit.png" alt=""></button>
                         <button><img src="./img/dumpster_icon.png" alt=""></button>
-                    </div>
-                </div>
+                    </nav>
+                </article>
             </section>
             <section class="card">
                 <figure>
                     <img src="./img/SonoBisqueDoll_Manga.jpg" alt="Capa do Mangá Kimetsu no Yaiba">
                 </figure>
 
-                <div class="Card-Text">
+                <article class="Card-Text">
                     <h4>Sono Bisque Doll wa Koi wo Suru</h4>
                     <p class="tag">Completo</p>
 
@@ -79,9 +79,53 @@
                     <progress id="progresso1" value="115.50" max="115.50">100%</progress>
 
                     <p>Atualizado em: 01-09-2025</p>
-                    <div class="acoes">
-                        <button aria-label="Editar"><img src="./img/Icon_Edit.png" alt=""></button>
-                        <button aria-label="Excluir"><img src="./img/dumpster_icon.png" alt=""></button>
+                    <nav class="acoes">
+                        <a href="#abrirModal" class="Editar"><img src="./img/Icon_Edit.png" alt="Editar"></a>
+                        <a class="Excluir"><img src="./img/dumpster_icon.png" alt="Excluir"></a>
+                    </nav>
+                </article>
+            </section>
+            <!-- Modal -->
+            <section class="Modal-container">
+                <!-- Janela do Modal -->
+                <div id="abrirModal" class="modal">
+                    <div class="modal-conteudo">
+                    <!-- Capa -->
+                    <figure class="capa">
+                        <img src="./img/SonoBisqueDoll_Manga.jpg" alt="Capa do mangá Sono Bisque Doll wa Koi wo Suru">
+                    </figure>
+                    <!-- Texto -->
+                    <div class="Card-modal">
+                        <h4>Sono Bisque Doll wa Koi wo Suru</h4>
+                        <p>Autor: <strong>Shinichi Fukuda</strong></p>
+                        <p>Total de capítulos: <strong>115.50</strong></p>
+                    
+                        <!-- Formulário -->
+                        <form class="modal-form" action="" method="post">
+                        <h2 class="affs" for="capituloAtual">
+                            Capítulo Atual
+                            <input type="number" id="capituloAtual" name="capituloAtual" placeholder="Digite o capítulo">
+                        </h2>
+                        <h2 class="affs"  for="statusLeitura">
+                            Status de Leitura
+                            <select id="statusLeitura" name="statusLeitura">
+                            <option value="Completo">Completo</option>
+                            <option value="Lendo">Lendo</option>
+                            <option value="Pausado">Pausado</option>
+                            <option value="Dropado">Dropado</option>
+                            </select>
+                        </h2>
+                        <h2  class="affs"  for="notas">
+                            Notas
+                            <textarea id="notas" name="notas" placeholder="Adicione notas sobre seus momentos favoritos"></textarea>
+                        </h2>
+                        <!-- Ações -->
+                        <div class="botoes-modal">
+                            <a href="#" class="btn cancelar">Cancelar</a>
+                            <button type="submit" class="btn atualizar">Atualizar Progresso</button>
+                        </div>
+                        </form>
+                    </div>
                     </div>
                 </div>
             </section>
