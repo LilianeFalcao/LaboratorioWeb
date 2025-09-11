@@ -331,7 +331,6 @@ footer h2 {
 .Card-modal {
     display: flex;
     flex-direction: column;
-    flex: 1;
 }
 
 .Card-modal h4 {
