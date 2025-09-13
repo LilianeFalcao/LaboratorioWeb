@@ -2,133 +2,124 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/meuProg.css">
-    <link rel="stylesheet" href="./css/responsivo.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/meuProg.css" />
+    <link rel="stylesheet" href="./css/responsivo.css" />
     <title>Meu Progresso</title>
 </head>
 
-<body class="fundo">
+<body>
     <header>
         <a href="feed.html">
-            <img src="./img/Logo.png" alt="Logo do site Jornada do Leitor">
+            <img src="./img/Logo.png" alt="Logo do site Jornada do Leitor" />
         </a>
         <nav>
             <ul>
                 <li><a href="feed.html">Feed</a></li>
                 <li><a href="./meuprogresso.html">Meu Progresso</a></li>
                 <li>
-                    <a href="#" class="btn" aria-label="Adicionar Progresso">+ Adicionar Progresso</a>
+                    <a class="btn" href="#">+ Adicionar Progresso</a>
                 </li>
             </ul>
         </nav>
     </header>
-
 
     <main>
         <h1>Meu Progresso de Leitura</h1>
         <p>Acompanhe e gerencie sua coleção de mangás</p>
 
         <section>
-            <form class="search-form" action="submit">
-                <input class="buscar" type="text" placeholder="Buscar Mangás">
+            <form>
+                <input type="search" placeholder="Buscar Mangás" />
             </form>
-            <aside class="filtros">
+            <aside>
                 <button type="button">Todos</button>
                 <button type="button">Completos</button>
                 <button type="button">Lendo...</button>
             </aside>
         </section>
 
-        <section class="cards-container">
-            <section class="card">
+        <section>
+            <section>
                 <figure>
-                    <img src="./img/Manga_Kimetsu_No_Yaiba.jpg" alt="Capa do Mangá Kimetsu no Yaiba">
+                    <img src="./img/Manga_Kimetsu_No_Yaiba.jpg" alt="Capa do Mangá Kimetsu no Yaiba" />
                 </figure>
-
-                <article class="Card-Text">
+                <article>
                     <h4>Kimetsu no Yaiba</h4>
-                    <p class="tag">Completo</p>
-
+                    <p>Completo</p>
                     <p>Capítulos 205 de 205</p>
-
                     <label for="progresso">Progresso</label>
                     <progress id="progresso" value="205" max="205">100%</progress>
-
                     <p>Atualizado em: 28-08-2025</p>
-
-                    <nav class="acoes">
-                        <button><img src="./img/Icon_Edit.png" alt=""></button>
-                        <button><img src="./img/dumpster_icon.png" alt=""></button>
+                <nav>
+                        <button>
+                            <img src="./img/Icon_Edit.png" alt="Editar" />
+                        </button>
+                        <button>
+                            <img src="./img/dumpster_icon.png" alt="Excluir" />
+                        </button>
                     </nav>
                 </article>
             </section>
-            <section class="card">
+
+            <section>
                 <figure>
-                    <img src="./img/SonoBisqueDoll_Manga.jpg" alt="Capa do Mangá Kimetsu no Yaiba">
+                    <img src="./img/SonoBisqueDoll_Manga.jpg" alt="Capa do Mangá Sono Bisque Doll wa Koi wo Suru" />
                 </figure>
-
-                <article class="Card-Text">
+                <article>
                     <h4>Sono Bisque Doll wa Koi wo Suru</h4>
-                    <p class="tag">Completo</p>
-
+                    <p>Completo</p>
                     <p>Capítulos 115.50 de 115.50</p>
-
                     <label for="progresso1">Progresso</label>
-                    <progress id="progresso1" value="115.50" max="115.50">100%</progress>
-
+                    <progress id="progresso1" value="115.50" max="115.50">
+                        100%
+                    </progress>
                     <p>Atualizado em: 01-09-2025</p>
-                    <nav class="acoes">
-                        <a href="#abrirModal" class="Editar"><img src="./img/Icon_Edit.png" alt="Editar"></a>
-                        <a class="Excluir"><img src="./img/dumpster_icon.png" alt="Excluir"></a>
+                    <nav>
+                        <a href="#abrirModal"><img src="./img/Icon_Edit.png" alt="Editar" /></a>
+                        <a><img src="./img/dumpster_icon.png" alt="Excluir" /></a>
                     </nav>
                 </article>
             </section>
+
             <!-- Modal -->
-            <section class="Modal-container">
-                <!-- Janela do Modal -->
-                <div id="abrirModal" class="modal">
-                    <div class="modal-conteudo">
-                    <!-- Capa -->
-                    <figure class="capa">
-                        <img src="./img/SonoBisqueDoll_Manga.jpg" alt="Capa do mangá Sono Bisque Doll wa Koi wo Suru">
+            <div id="abrirModal">
+                <div>
+                    <figure>
+                        <img src="./img/SonoBisqueDoll_Manga.jpg"
+                            alt="Capa do mangá Sono Bisque Doll wa Koi wo Suru" />
                     </figure>
-                    <!-- Texto -->
-                    <div class="Card-modal">
+                    <div>
                         <h4>Sono Bisque Doll wa Koi wo Suru</h4>
                         <p>Autor: <strong>Shinichi Fukuda</strong></p>
                         <p>Total de capítulos: <strong>115.50</strong></p>
-                    
-                        <!-- Formulário -->
-                        <form class="modal-form" action="" method="post">
-                        <h2 class="affs" for="capituloAtual">
-                            Capítulo Atual
-                            <input type="number" id="capituloAtual" name="capituloAtual" placeholder="Digite o capítulo">
-                        </h2>
-                        <h2 class="affs"  for="statusLeitura">
-                            Status de Leitura
-                            <select id="statusLeitura" name="statusLeitura">
-                            <option value="Completo">Completo</option>
-                            <option value="Lendo">Lendo</option>
-                            <option value="Pausado">Pausado</option>
-                            <option value="Dropado">Dropado</option>
-                            </select>
-                        </h2>
-                        <h2  class="affs"  for="notas">
-                            Notas
-                            <textarea id="notas" name="notas" placeholder="Adicione notas sobre seus momentos favoritos"></textarea>
-                        </h2>
-                        <!-- Ações -->
-                        <div class="botoes-modal">
-                            <a href="#" class="btn cancelar">Cancelar</a>
-                            <button type="submit" class="btn atualizar">Atualizar Progresso</button>
-                        </div>
+                        <form>
+                            <h2>
+                                Capítulo Atual
+                                <input type="number" id="capituloAtual" name="capituloAtual"
+                                    placeholder="Digite o capítulo" />
+                            </h2>
+                            <h2>
+                                Status de Leitura
+                                <select id="statusLeitura" name="statusLeitura">
+                                    <option value="Completo">Completo</option>
+                                    <option value="Lendo">Lendo</option>
+                                </select>
+                            </h2>
+                            <h2>
+                                Notas
+                                <textarea id="notas" name="notas"
+                                    placeholder="Adicione notas sobre seus momentos favoritos"></textarea>
+                            </h2>
+                            <div>
+                                <a href="#">Cancelar</a>
+                                <button type="submit">Atualizar Progresso</button>
+                            </div>
                         </form>
                     </div>
-                    </div>
                 </div>
-            </section>
+            </div>
         </section>
     </main>
 

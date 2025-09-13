@@ -1,71 +1,20 @@
-/* Responsividade */
+/* ---------------- Responsividade ---------------- */
 
-@media (max-width: 460px) {
+@media (max-width: 540px) {
     header nav ul {
         display: flex;
         flex-wrap: wrap;
     }
 
-    header nav ul li{
-        font-size: 0.3rem;
-    }
-
-    main section {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-}
-
-@media (max-width: 536px) {
-    .modal-conteudo{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .modal-conteudo .capa {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 8rem;
-        height: 8rem;
-        margin: 6rem 0 3rem;
-    }
-    
-    header nav ul {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    figure img{
-        width: 2rem;
-        height: 2rem;
-        object-fit: cover;
-    }
-}
-
-@media (max-width: 670px) {
-    header nav ul {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .card-text h4 {
-        margin-top: 2rem;
-    }
-
-    footer h2 {
-        font-size: 1.5rem;
-        margin: 5px;
-        color: #ffffff;
-    }
-}
-
-
-@media (max-width: 600px) {
     header nav ul li {
         font-size: 0.9rem;
+    }
+
+    figure img,
+    .card img {
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
     }
 
     .card {
@@ -74,14 +23,8 @@
         text-align: center;
     }
 
-    .card img {
-        width: 100%;
-        max-width: 240px;
-    }
-
     .acoes {
         justify-content: center;
-        width: 2;
     }
 
     .acoes img {
@@ -98,70 +41,31 @@
         margin: 5px;
         color: #ffffff;
     }
+
+    /* Ajuste do modal */
+    #abrirModal div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #abrirModal div figure img {
+        width: 8rem;
+        height: auto;
+        margin-bottom: 1rem;
+    }
 }
 
-@media (max-width: 748px) {
+/* Tablets */
+@media (max-width: 768px) {
     header {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 15px 40px;
-        flex-wrap: nowrap;
-    }
-
-    header nav ul {
-        list-style: none;
-        display: flex;
-        gap: 5px;
-    }
-
-    header nav a {
-        color: white;
-        text-decoration: none;
-        font-weight: 500;
-
-    }
-
-    .card-text h4 {
-        margin-top: 2rem;
-    }
-
-    footer h2 {
-        font-size: 1.5rem;
-        margin: 5px;
-        color: #ffffff;
-    }
-}
-
-
-@media (max-width: 768px) {
-    main {
-        flex-direction: column;
-    }
-
-    main figure {
-        height: 250px;
-    }
-
-    main section {
-        padding: 20px;
-    }
-
-    .card {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .card img {
-        width: 100%;
-        max-width: 200px;
-        height: auto;
-    }
-
-    .Card-Text h4 {
-        margin-top: 1.8rem;
-        font-size: 1rem;
+        flex-wrap: wrap;
     }
 
     header nav ul {
@@ -176,6 +80,31 @@
         text-align: center;
     }
 
+    main {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    main figure {
+        height: auto;
+    }
+
+    .card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .card img {
+        width: 100%;
+        max-width: 240px;
+        height: auto;
+    }
+
+    .card-text h4 {
+        margin-top: 1.8rem;
+        font-size: 1rem;
+    }
 
     .search-form {
         width: 100%;
@@ -185,25 +114,16 @@
     .search-form input {
         width: 70%;
     }
-}
 
-
-@media (max-width: 802px) {
-    .card {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .card img {
-        width: 100%;
-        max-width: 200px;
-        height: auto;
+    footer h2 {
+        font-size: 1.2rem;
+        margin: 5px;
+        color: #ffffff;
     }
 }
 
-
-@media (max-width: 860px) {
+/* Notebooks menores / telas médias */
+@media (max-width: 1024px) {
     .card {
         flex-direction: column;
         align-items: center;
@@ -220,16 +140,13 @@
         width: 40px;
         height: 40px;
     }
-}
 
-
-@media (max-width: 516px) {
     .card-text h4 {
         margin-top: 2rem;
     }
 
     footer h2 {
-        font-size: 1rem;
+        font-size: 1.5rem;
         margin: 5px;
         color: #ffffff;
     }

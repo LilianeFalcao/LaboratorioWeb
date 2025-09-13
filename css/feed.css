@@ -17,7 +17,7 @@
     --Titulo: #333;
 }
 
-body.fundoFeed {
+body {
     background-color: var(--Fundo);
     color: var(--Titulo);
 }
