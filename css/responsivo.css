@@ -1,9 +1,89 @@
 /* ---------------- Responsividade ---------------- */
+@media (max-width: 394px) {
+  /* Cabeçalho */
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+        text-align: center;
+    }
+    
+    header a img{
+        display: none;
+    }
+
+    header nav ul {
+        flex-direction: row;
+        gap: 2px;
+        margin-top: 10px;
+    }
+
+    /* Conteúdo Principal */
+    main > section:first-of-type {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    aside {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    /* Cards */
+    main > section:last-of-type > section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    main > section:last-of-type img {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+    }
+    
+    main > section:last-of-type article p:first-of-type {
+        align-self: center;
+    }
+
+    /* Modal */
+    #abrirModal > div {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+
+    #abrirModal figure img {
+        width: 8rem;
+        height: 8rem;
+    }
+    
+    #abrirModal form div {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
 
 @media (max-width: 540px) {
-    header nav ul {
+    header a img{
+        display: none;
+    }
+
+    header a{
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    header nav ul {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        gap: 2px;
     }
 
     header nav ul li {
