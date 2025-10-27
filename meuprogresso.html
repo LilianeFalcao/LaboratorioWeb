@@ -19,7 +19,7 @@
                 <li><a href="feed.html">Feed</a></li>
                 <li><a href="./meuprogresso.html">Meu Progresso</a></li>
                 <li>
-                    <a class="btn" href="#">+ Adicionar Progresso</a>
+                    <a class="btn" href="#abrirModalProg">+ Adicionar Progresso</a>
                 </li>
             </ul>
         </nav>
@@ -84,7 +84,43 @@
             </section>
 
             <!-- Modal -->
-            <div id="abrirModal">
+            <div id="abrirModalProg" class="modal">
+                <div>
+                    <h4>Adicione Mangás a sua lista</h4>
+                    <p>Search for a manga title to add to your reading list</p>
+                    <input type="search" id="search">
+                    <div>
+                        <form>
+                            <h2>
+                                Capítulo Atual
+                                <input type="number" id="capituloAtual" name="capituloAtual"
+                                    placeholder="Digite o capítulo" />
+                            </h2>
+                            <h2>
+                                Status de Leitura
+                                <select id="statusLeitura" name="statusLeitura">
+                                    <option value="Completo">Completo</option>
+                                    <option value="Lendo">Lendo</option>
+                                </select>
+                            </h2>
+                            <h2>
+                                Notas
+                                <textarea id="notas" name="notas"
+                                    placeholder="Adicione notas sobre seus momentos favoritos"></textarea>
+                            </h2>
+                            <div>
+                                <a href="#">Cancelar</a>
+                                <button type="submit">Atualizar Progresso</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+            
+            <!-- Modal -->
+            <div id="abrirModal" class="modal">
                 <div>
                     <figure>
                         <img src="./img/SonoBisqueDoll_Manga.jpg"
